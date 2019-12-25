@@ -22,11 +22,11 @@ public class stanfordParser {
         }
         LexicalizedParser lp = LexicalizedParser.loadModel(parserModel, "-outputFormatOptions", "basicDependencies");
 
-        FileReader dataFile=new FileReader("./data/train_sen.txt");
-        FileWriter dataSegment=new FileWriter("./data/train_segment.txt");
-        FileWriter dataEntityPos=new FileWriter("./data/train_entity_position.txt");
-        FileWriter dataWrite=new FileWriter("./data/train_dependencies.txt");
-        FileWriter dataWriteTag=new FileWriter("./data/train_tagged.txt");
+        FileReader dataFile=new FileReader("./data/conll04/conll04_test/conll04_test_sen.txt");
+        FileWriter dataSegment=new FileWriter("./data/conll04/conll04_test/test_segment.txt");
+        FileWriter dataEntityPos=new FileWriter("./data/conll04/conll04_test/test_entity_position.txt");
+        FileWriter dataWrite=new FileWriter("./data/conll04/conll04_test/test_dependencies.txt");
+        FileWriter dataWriteTag=new FileWriter("./data/conll04/conll04_test/test_tagged.txt");
 
         BufferedReader bfRead=new BufferedReader(dataFile);
 
@@ -192,13 +192,13 @@ public class stanfordParser {
             if(rawWords2.get(i).toString().equals("<e1>")){
                 e1Pos=i;
             }
-            if(rawWords2.get(i).toString().equals("</e1>")){
+            if(rawWords2.get(i).toString().equals("<\\e1>")){
                 e1PosGan=i;
             }
             if(rawWords2.get(i).toString().equals("<e2>")){
                 e2Pos=i;
             }
-            if(rawWords2.get(i).toString().equals("</e2>")){
+            if(rawWords2.get(i).toString().equals("<\\e2>")){
                 e2PosGan=i;
             }
         }

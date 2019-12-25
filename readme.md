@@ -37,4 +37,6 @@ Stanford Dependencies (SD) representation is:
 
 （3）DepDijkstra.java：调用Dijkstra.java文件算法，然后求出最短路径
 
+生成文件e1_SDP.txt,e1_sdp_pos.txt
+
 test_sen:3666,3851,3856,3886
